@@ -266,6 +266,9 @@ class List(UserList[ListEntryT]):
             ]
         )
 
+    def __getitem__(self, i):
+        return self.data[i]
+
 
 class ListEntry(Dictionary[JsonValueT]):
     """Base definition for objects within a list returned from qBittorrent."""
